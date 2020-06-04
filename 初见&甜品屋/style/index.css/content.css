@@ -34,6 +34,9 @@
 	top: 40px;
 	position: relative;
 }
+.cake{
+	height: 550px;
+}
 .type{
 	color: #111;
 	font:normal 500 25px/32px 微软雅黑;
@@ -153,7 +156,7 @@
 /* 马卡龙 */
 .mkl{
 	position: relative;
-	top:140px;
+	top:100px;
 }
 .mkl ul{
 	position: relative;
