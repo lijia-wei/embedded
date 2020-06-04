@@ -1,0 +1,136 @@
+body{
+	height: 100%;
+	position: relative;
+	min-height: 800px;
+}
+#wrapper{
+	font-size:14px;
+}
+#wrapper>img{
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	z-index: -1;
+}
+#wrapper>img:nth-child(1){
+	right: 0;
+}
+#wrapper>img:nth-child(2){
+	left: 0;
+	top: 500px;
+}
+#nav{
+	background-color: #EE7600;
+	position: relative;
+	height: 25px;
+	width: 100%;
+	line-height: 25px;
+	position: fixed;
+	top:0;
+}
+#nav span{
+	margin-left: 80px;
+}
+#nav ul{
+	position: absolute;
+	right: 0;
+	top:0;
+	margin-right: 80px;
+}
+#nav ul>li{
+	position: relative;
+	padding-right: 8px;
+}
+ul>li a{
+	color: #111;
+}
+li a:hover{
+	color: #EE0000;
+}
+#nav ul>li+li{
+	padding-left: 8px;
+}
+#nav ul>li+li::before{
+	display: block;
+	content: '';
+	position: absolute;
+	top:4px;
+	left:0;
+	width: 1.5px;
+	height: 18px;
+	background-color: #A1A1A1;
+}
+.h-l img{
+	height: 120px;
+	width: 120px;
+}
+.h-l span{
+	font-size: 32px;
+	color: #E9967A;
+}
+.h-l,.car{
+	margin-top: 20px;
+	width: 1000px;
+}
+
+.c-head span{
+	border-bottom: solid red 2px;
+	color: red;
+	font-size: 18px;
+}
+.car ul{
+	background-color: #EEDFCC;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+}
+.car ul li.choose{
+	width: 100px;
+	margin-left: 3%;
+}
+.car ul li.go{
+	width: 250px;
+}
+.go>img{
+	height: 90px;
+	width: 90px;
+	margin-top: 5px;
+}
+.car ul li.item{
+	width: 120px;
+	text-align: center;
+} 
+.num>input{
+	width: 30px;
+}
+.num>a, .num>input{
+	line-height: 15px;
+	height: 15px;
+	display: inline-block;
+	position: relative;
+	font-size: 16px;
+	text-align: center;
+}
+.num>a{
+	border: solid 1px #111;
+	width: 15px;
+}
+.c-good>ul{
+	height: 120px;
+	margin: 10px 0;
+	border-top: solid 3px #CDC5BF;
+}
+.c-pay{
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+.c-pay .buy{
+	background-color: red;
+}
+.c-pay .buy>a:hover{
+	color: white;
+}
+#footer{
+	position: absolute;
+	top:100%;
+}

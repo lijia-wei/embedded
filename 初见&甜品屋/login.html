@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>初見&甜點屋</title>
+    <base target="_self">
+    <meta name="keywords" content="初見&甜點屋">
+    <meta name="description" content="初見门店不断以新形象面向大众，在传统的美式风格上添加新鲜元素，形成独创性的风格，热情欢迎大家光临。">
+    <meta name="generator" content="初見&甜點屋" />
+    <meta name="author" content="初見&甜點屋" />
+	<script src="js/jquery.min.js"></script>
+	<link rel="stylesheet" href="style/common.css">
+	<link rel="stylesheet" href="style/login.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+	<div class="box m-w clearfix">
+    	<div class="f-box sign-up-box">
+        	<form action="#">
+        	    <h1>注 册</h1>
+        	    <div class="social-box">
+        	        <a href="javascript:;" class="fl"><img src="images/login/weixin.png" a</a>
+        	        <a href="javascript:;" class="fl"><img src="images/login/weibo.png" alt=""></a>
+        	        <a href="javascript:;" class="fl"><img src="images/login/QQ.png" alt=""></a>
+        	        </div>
+        	        <span>选择以上方式登录或者使用您的账号</span>
+        	        <input type="text" placeholder="姓名">
+        	        <input type="email" placeholder="电话" maxlength="11">
+        	    <div class="num">
+        	        <input type="text" placeholder="验证码" maxlength="6">
+                    <button type="button">发送验证码</button><!-- type默认值为submit -->
+        	    </div>
+
+        	    <input type="password" maxlength="10" minlength="6" placeholder="6-10位数字、字母组合登录密码">
+                 <a href="#" id="passwordeye" class="invisible bgImg"></a>
+        	    <button type="button">注 册</button>
+        	</form>
+    	</div>
+
+    	<div class="f-box sign-in-box">
+        	<form action="#">
+            	<h1>登 录</h1>
+            	<div class="social-box">
+                	<a href="javascript:;" class="fl"><img src="images/login/weixin.png" alt=""></a>
+                	<a href="javascript:;" class="fl"><img src="images/login/weibo.png" alt=""></a>
+                	<a href="javascript:;" class="fl"><img src="images/login/QQ.png" alt=""></a>
+            	</div>
+            	<span>选择以上方式登录或者使用您的账号</span>
+            	<input type="email" placeholder="电话" maxlength="11">
+            	<input type="password" maxlength="10" minlength="6" placeholder="6-10位数字、字母组合登录密码">
+            	<a href="javascript:;">忘记密码？</a>
+            	<button type="button">登录</button>
+        	</form>
+    	</div>
+
+    	<div class="over-box">
+        	<div class="over">
+        		<div class="over-panel over-right">
+                	<h1>没有账号？</h1>
+                	<p>立即注册加入我们，和我们一起开始旅程吧。</p>
+                	<button class="ghost" id="signUp" type="button">注册</button>
+            	</div>
+            	<div class="over-panel over-left">
+                	<h1>已有账号？</h1>
+                	<p>请使用您的账号进行登录</p>
+                	<button class="ghost" id="signIn" type="button">登录</button>
+            	</div>
+        	</div>
+    	</div>
+	</div>
+<script>
+	$(function(){
+		$("#signUp").click(function(){
+			$(".box").addClass('active');
+		})
+		$("#signIn").click(function(){
+			$(".box").removeClass('active');
+		})
+        var time = 60;
+        function ti(){
+            var t=setInterval(function(){
+                time--;
+                $('.num button').html(time + '秒后重新发送');
+                if(time==0){
+                    clearTimeout(t);
+                    $('.num button').prop('disabled', 'false');
+                    $('.num button').html('发送验证码');
+                    time=60;
+                }
+            }, 1000)
+        }
+        $('.num button').click(function(){
+            $(this).prop('disabled', 'true');
+            ti();
+        })
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+body,ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,form,input{
+		margin:0;
+		padding:0;
+}
+ul{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	color: white;
+}
+body{
+	width: 1265px;
+}
+#wrapper, body{ 
+	overflow-x:hidden;
+	min-width:1200px;	
+	width: 100%;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.m-w{
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+}
+img{
+	vertical-align:middle;
+}   
+.clearfix:after{ 
+	content:'';
+	display:block;
+	clear:both;
+}
