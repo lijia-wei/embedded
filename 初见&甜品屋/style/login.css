@@ -31,7 +31,6 @@ span{
 	position:absolute;
 	top:0;
 	height:100%;
-	transition:all 0.6s ease-out;
 }
 .f-box form {
 	background-color:#fff;
@@ -42,7 +41,7 @@ span{
 }
 .social-box {
 	margin:10px 80px;
-	width: 190px;
+	width: 170px;
 	height: 60px;
 }
 .social-box a{
@@ -86,7 +85,7 @@ form>button, .over-panel>button{
 	font-size:12px;
 	font-weight:bold;
 	padding:12px 45px;
-	transition:transform 80ms ease-in;
+	transition:transform 30ms ease-in;
 }
 form>button:active, .over button:active{/*点击激活 */
 	transform:scale(0.95);/* 元素缩放倍数 */
@@ -106,50 +105,14 @@ form>button:active, .over button:active{/*点击激活 */
 	left:0;
 	width:50%;
 	z-index:3;
+	transition:transform 0.5s ease-out;
 }
 .sign-up-box {
 	left:0;
 	width:50%;
 	opacity:0;
 	z-index:2;
-}
-
-.over-box {
-	position:absolute;
-	top:0;
-	left:50%;
-	width:50%;
-	height:100%;
-	overflow:hidden;
-	border-radius:10px;
-	z-index:8;
-	transition:transform 0.6s ease-in-out;
-}
-.over {
-	background:#F24903;
-	color:#fff;
-	height:100%;
-	width:200%;
-	position:absolute;
-	left:-100%;/* 以over-box为参考 */
-	transition:transform 0.6s ease-in-out;
-}
-.over-panel {
-	position:absolute;
-	top:0;
-	height:100%;
-	width:50%;
-	text-align:center;
-	transition:transform 0.6s ease-in-out;
-}
-.over-panel>h1{
-	margin-top: 120px;
-}
-.over-right {
-	right: 0;
-}
-.over-left {
-	left: 0;
+	transition:transform 0.5s ease-out;
 }
 .box.active .sign-in-box {
 	transform:translateX(100%);
@@ -159,9 +122,45 @@ form>button:active, .over button:active{/*点击激活 */
 	opacity:1;
 	z-index:5;
 }
+.over-box {
+	position:absolute;
+	top:0;
+	left:50%;
+	width:50%;
+	height:100%;
+	overflow:hidden;/* 另一半隐藏 */
+	border-radius:10px;
+	z-index:8;
+	transition:transform 0.5s ease-in-out;
+}
 .box.active .over-box{
 	transform:translateX(-100%);
 }
+.over {
+	background:#F24903;
+	color:#fff;
+	height:100%;
+	width:200%;
+	position:absolute;
+	left:-100%;/* 以over-box为参考 */
+	transition:transform 0.5s ease-in-out;
+}
 .box.active .over{
 	transform:translateX(50%);
+}
+.over-panel {
+	position:absolute;
+	top:0;
+	height:100%;
+	width:50%;
+	text-align:center;
+}
+.over-panel>h1{
+	margin-top: 120px;
+}
+.over-right{
+	right: 0;
+}
+.over-left{
+	left: 0;
 }
