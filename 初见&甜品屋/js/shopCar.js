@@ -38,7 +38,7 @@ $(function(){
 		var money = 0;		
 		$('.itxt').each(function(i, ele){
 			if($(ele).parent().siblings('.choose').children().prop('checked')){
-				count+=parseFloat($(ele).val());
+				count+=parseInt($(ele).val());
 			}		
 		});
 		$('.bought em').text(count);

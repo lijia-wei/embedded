@@ -32,7 +32,7 @@ $(function(){
 			index=$('.box-img').length
 		}
 		index--;
-		$('.box-img').eq(index).fadeIn().siblings('.box-img').fadeOut();
+		$('.box-img').stop().eq(index).fadeIn().siblings('.box-img').fadeOut();
 		$('.botton').eq(index).css('background-color', '#fff').siblings('.botton').css('background-color', '#ccc');
 		dinshiqi();
 	})
@@ -42,7 +42,7 @@ $(function(){
 			index=-1;
 		}
 		index++;
-		$('.box-img').eq(index).fadeIn().siblings('.box-img').fadeOut();
+		$('.box-img').stop().eq(index).fadeIn().siblings('.box-img').fadeOut();
 		$('.botton').eq(index).css('background-color', '#fff').siblings('.botton').css('background-color', '#ccc');
 		dinshiqi();
 	})
@@ -50,7 +50,7 @@ $(function(){
 		clearInterval(f);
 		var indexx=$(this).index();
 		index=indexx;
-		$('.box-img').eq(index).fadeIn().siblings('.box-img').fadeOut();
+		$('.box-img').stop().eq(index).fadeIn().siblings('.box-img').fadeOut();
 		$('.botton').eq(index).css('background-color', '#fff').siblings('.botton').css('background-color', '#ccc');
 		dinshiqi();
 	})
